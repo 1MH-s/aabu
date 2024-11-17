@@ -1,6 +1,7 @@
 import 'package:aabu/themes/dark_theme.dart';
 import 'package:aabu/themes/light_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const AabuApp());
@@ -11,15 +12,13 @@ class AabuApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'AABU',
       themeMode: ThemeMode.light,
       theme: lightAppTheme(),
       darkTheme: darkAppTheme(),
-      home: const Scaffold(
-
-      ),
+      home: const Scaffold(),
     );
   }
 }
