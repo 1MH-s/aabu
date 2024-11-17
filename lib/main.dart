@@ -1,3 +1,5 @@
+import 'package:aabu/themes/dark_theme.dart';
+import 'package:aabu/themes/light_theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,10 +14,9 @@ class AabuApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'AABU',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      themeMode: ThemeMode.light,
+      theme: lightAppTheme(),
+      darkTheme: darkAppTheme(),
       home: const Scaffold(
 
       ),
