@@ -1,5 +1,9 @@
+import 'package:aabu/middlewares/auth_middleware.dart';
 import 'package:aabu/themes/dark_theme.dart';
 import 'package:aabu/themes/light_theme.dart';
+import 'package:aabu/views/home_page.dart';
+import 'package:aabu/views/user_gates/login_page.dart';
+import 'package:aabu/views/user_gates/register_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -18,13 +22,23 @@ class AabuApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'AABU',
-      themeMode: ThemeMode.light,
-      theme: lightAppTheme(),
-      darkTheme: darkAppTheme(),
-      home: const Scaffold(),
+    return SafeArea(
+      child: GetMaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: 'AABU',
+        themeMode: ThemeMode.light,
+        theme: lightAppTheme(),
+        darkTheme: darkAppTheme(),
+        getPages: [
+          GetPage(
+              name: "/",
+              page: () => const LoginPage(),
+              middlewares: [AuthMiddleWare()]),
+          GetPage(name: "/register_page", page: () => const RegisterPage()),
+          GetPage(name: "/home_page", page: () => const HomePage()),
+          //GetPage(name: "/qr_attendance", page: () => const QrAttendance()),
+        ],
+      ),
     );
   }
 }
