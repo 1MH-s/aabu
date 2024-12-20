@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "784650553110",
+    "project_id": "aabu-17157",
+    "storage_bucket": "aabu-17157.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:784650553110:android:f7cbd48de1747d9b7d3237",
+        "android_client_info": {
+          "package_name": "jo.edu.aabu.aabu"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBB_dzCRfDHNAwobhbdgE3zcEX0aciFIk8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
